@@ -1,5 +1,5 @@
-# Semantic Ontology and Drools Rules for Precast Concrete Slab Quality Inspection
-# 预制混凝土叠合板质量检测语义本体与 Drools 规则库
+# Semantic Ontology and Drools Rules for Precast Concrete Slab Dimensional Quality Inspection
+# 预制混凝土板尺寸质量检测语义本体与 Drools 规则库
 
 [English Version](#english-version) | [中文版](#中文版)
 
@@ -7,7 +7,7 @@
 
 ## 中文版
 
-本项目包含用于预制混凝土叠合板尺寸质量自动检测的数字资产，提供了一套将原始检测数据转化为诊断结果和全局质量决策的逻辑框架。
+本项目包含用于预制混凝土板尺寸质量自动检测的数字资产，提供了一套将原始检测数据转化为诊断结果和质量决策的逻辑框架。
 
 ### 核心文件说明
 
@@ -15,7 +15,7 @@
 
 #### 1. `PCS.owl` (本体与 SWRL 规则集)
 * **描述**：基于 OWL 2 标准构建的预制混凝土构件综合语义模型。
-* **逻辑范围**：包含全套语义网规则语言 (SWRL) 规则，用于微观层面的缺陷诊断。涵盖六大类构件：**轮廓、孔洞、洞口、机电盒、分布筋、桁架筋**。
+* **逻辑范围**：包含全套语义网规则语言 (SWRL) 规则，用于微观层面的缺陷诊断。涵盖六大类构件：**轮廓、孔、洞、机电盒、分布筋、桁架筋**。
 * **生命周期阶段**：规则具有阶段感知能力，可针对**拼装 (Assembly)、生产 (Production) 和完工 (Completion)** 三个关键阶段提供专门的诊断和修复建议。
 
 #### 2. `PCS_Decision.drl` (Drools 决策规则)
@@ -32,7 +32,7 @@
 
 ## English Version
 
-This repository hosts the digital artifacts for the automated quality inspection of precast concrete slabs. It provides the logic-based framework to transform raw inspection data into diagnostic results and global quality decisions.
+This repository hosts the digital artifacts for the automated Dimensional quality inspection of precast concrete slabs. It provides the logic-based framework to transform raw inspection data into diagnostic results and global quality decisions.
 
 ### Core Files
 
