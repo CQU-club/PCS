@@ -1,9 +1,3 @@
-好的，我已经为你准备好了中英文双语版的 `README.md`。这种排版方式在国际化的学术开源项目中非常常见，既方便国内同行交流，也能满足国际审稿和引用的需求。
-
-你可以直接将以下内容复制到你的 GitHub `README.md` 文件中：
-
----
-
 # Semantic Ontology and Drools Rules for Precast Concrete Slab Quality Inspection
 # 预制混凝土叠合板质量检测语义本体与 Drools 规则库
 
@@ -32,7 +26,7 @@
 ### 引用
 
 如果您在研究中使用了这些资源，请引用以下论文：
-> *[此处填入您的论文引用信息，例如：作者名. "论文标题". Automation in Construction, 2026]*
+> OntoCV-ADM: A Vision-and-Knowledge Multimodal Framework for Dimensional Quality Assessment and Decision Making
 
 ---
 
@@ -57,4 +51,4 @@ This repository contains two essential components that drive the quality control
 ### Citation
 
 If you use these artifacts in your research, please cite the following paper:
-> *[Insert your paper citation here, e.g., Your Name et al., "Journal of Automation in Construction", 2026]*
+> OntoCV-ADM: A Vision-and-Knowledge Multimodal Framework for Dimensional Quality Assessment and Decision Making
