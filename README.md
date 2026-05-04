@@ -1,53 +1,60 @@
+好的，我已经为你准备好了中英文双语版的 `README.md`。这种排版方式在国际化的学术开源项目中非常常见，既方便国内同行交流，也能满足国际审稿和引用的需求。
 
-
-# Semantic Ontology and Rule-based Reasoning for Precast Concrete Slab Quality Inspection
-
-[cite_start]本项目包含用于预制混凝土叠合板尺寸质量自动检测的语义本体模型及规则推理引擎文件。本项目旨在提高预制构件质量检测的可复现性，并提供一套从“微观缺陷诊断”到“宏观质量评价”的完整逻辑框架 [cite: 1, 2]。
-
-## 核心文件说明
-
-本仓库包含两个核心文件，共同构成了混合推理系统：
-
-1.  **`PCS.owl` (Ontology & SWRL Rules)**:
-    * [cite_start]**描述**: 基于 OWL 2 标准构建的预制构件尺寸质量本体模型 [cite: 1]。
-    * [cite_start]**核心逻辑**: 包含 500 多条 SWRL 规则，涵盖了 6 大类构件（轮廓、孔洞、洞口、机电盒、分布筋、桁架筋）在“拼装 (Assembly)”、“生产 (Production)”和“完工 (Completion)”三个阶段的尺寸检测、缺陷溯源及修复建议逻辑 [cite: 3, 4, 19, 45, 563]。
-    * **工具**: 建议使用 **Protégé 5.x** 或更高版本打开。
-
-2.  **`PCS_Decision.drl` (Drools Rules)**:
-    * **描述**: 基于 Drools 规则语言（DRL）编写的宏观决策文件。
-    * **核心逻辑**: 利用 Drools 的“封闭世界假设 (CWA)”弥补 SWRL 的逻辑局限。它负责执行“一票否决”逻辑（若任一子构件存在严重缺陷则判定整板不合格）以及“全局放行”逻辑（若无缺陷则判定合格）。
-
-## 混合推理架构
-
-本项目采用了一种双层推理架构，以应对工程现场复杂的数据逻辑：
-
-* [cite_start]**微观诊断层 (SWRL)**: 运行于开放世界假设 (OWA) 下，擅长根据离散的传感器数据（如 RT-DETR 检测到的坐标和尺寸）进行确定性的缺陷识别和原因分析（如：识别由于模具变形导致的孔洞缩小） [cite: 1, 2, 88]。
-* **宏观决策层 (Drools)**: 运行于封闭世界假设 (CWA) 下，负责最终的质检结论判定。它解决了 SWRL 无法在“未发现缺陷”时自动推断“合格”的数学难题。
-
-## 本体架构信息
-
-* [cite_start]**Ontology IRI**: `http://www.semanticweb.org/lqz/ontologies/2025/3/PCS` [cite: 1]
-* [cite_start]**Version**: 1.0 [cite: 2]
-* [cite_start]**Author**: CQU [cite: 2]
-* [cite_start]**Key Classes**: `Construction_element`, `Dimensional_quality`, `Hole`, `Opening`, `Electrical_box`, `Distribution_bar`, `Truss_bar` [cite: 3, 4, 5, 7, 19]。
-
-## 如何使用
-
-1.  **本体查看**: 下载 `PCS.owl`，在 Protégé 中加载。您可以通过 `SWRLTab` 查看所有的检测逻辑。
-2.  **规则执行**: 在 Java 后端项目中引入 Drools 依赖，加载 `PCS_Decision.drl`。
-3.  [cite_start]**数据映射**: 将传感器获取的构件测量值映射为本体中的 `Data Property`（如 `hasD_Length`），推理引擎将自动输出 `causedBy` (缺陷原因) 和 `has_repair_suggestion` (修复建议) [cite: 10, 34, 119]。
-
-## 引用
-
-如果您在研究中使用了这些文件，请引用相关论文：
-> *[此处可填入您的论文引用信息]*
+你可以直接将以下内容复制到你的 GitHub `README.md` 文件中：
 
 ---
 
-### 💡 为什么这样写符合行业惯例？
+# Semantic Ontology and Drools Rules for Precast Concrete Slab Quality Inspection
+# 预制混凝土叠合板质量检测语义本体与 Drools 规则库
 
-1.  **明确架构逻辑**：审稿人非常看重您为什么要同时提供两个文件。README 中明确解释了 **SWRL (OWA) 与 Drools (CWA)** 的分工，体现了极高的学术专业性。
-2.  [cite_start]**提供元数据**：清晰列出了 IRI、版本和作者 [cite: 1, 2]，这符合 **FAIR 原则**（可发现、可访问、可互操作、可重用）。
-3.  [cite_start]**使用说明**：README 不仅是文件的陈列，更指导了他人如何利用这些文件构建自己的系统 [cite: 10]。
+[English Version](#english-version) | [中文版](#中文版)
 
-您可以根据实际的仓库名和论文接收状态对以上内容进行微调。这个 README 配合您的 `.owl` 和 `.drl` 文件，完全符合 `Automation in Construction` 的数据开源政策。
+---
+
+## 中文版
+
+本项目包含用于预制混凝土叠合板尺寸质量自动检测的数字资产，提供了一套将原始检测数据转化为诊断结果和全局质量决策的逻辑框架。
+
+### 核心文件说明
+
+本仓库包含两个驱动质量控制系统的核心组件：
+
+#### 1. `PCS.owl` (本体与 SWRL 规则集)
+* **描述**：基于 OWL 2 标准构建的预制混凝土构件综合语义模型。
+* **逻辑范围**：包含全套语义网规则语言 (SWRL) 规则，用于微观层面的缺陷诊断。涵盖六大类构件：**轮廓、孔洞、洞口、机电盒、分布筋、桁架筋**。
+* **生命周期阶段**：规则具有阶段感知能力，可针对**拼装 (Assembly)、生产 (Production) 和完工 (Completion)** 三个关键阶段提供专门的诊断和修复建议。
+
+#### 2. `PCS_Decision.drl` (Drools 决策规则)
+* **描述**：专为 Drools 规则引擎设计的工业级业务规则文件。
+* **逻辑范围**：管理整块构件的宏观决策逻辑。实现了“一票否决”逻辑（若发现严重缺陷则判定整板不合格）和“放行”逻辑（若未发现缺陷则认证为合格）。
+* **工程价值**：处理了纯 OWL/SWRL 框架难以实现的复杂逻辑运算（如“非推导即否定”），确保了工厂部署时决策的稳健性。
+
+### 引用
+
+如果您在研究中使用了这些资源，请引用以下论文：
+> *[此处填入您的论文引用信息，例如：作者名. "论文标题". Automation in Construction, 2026]*
+
+---
+
+## English Version
+
+This repository hosts the digital artifacts for the automated quality inspection of precast concrete slabs. It provides the logic-based framework to transform raw inspection data into diagnostic results and global quality decisions.
+
+### Core Files
+
+This repository contains two essential components that drive the quality control system:
+
+#### 1. `PCS.owl` (Ontology & SWRL Rule Set)
+* **Description**: A comprehensive semantic model developed using the OWL 2 standard for precast concrete components.
+* **Logic Scope**: It contains a full suite of Semantic Web Rule Language (SWRL) rules designed for micro-level defect diagnosis. It covers six major categories of components: **Contours, Holes, Openings, Electrical Boxes, Distribution Bars, and Truss Bars**.
+* **Lifecycle Stages**: The rules are context-aware, providing specialized diagnostics and repair suggestions across three critical stages: **Assembly, Production, and Completion**.
+
+#### 2. `PCS_Decision.drl` (Drools Decision Rules)
+* **Description**: An industrial-grade business rule file designed for the Drools Rule Engine.
+* **Logic Scope**: This file manages the macro-level decision logic for the entire component. It implements the "Veto" logic (rejecting the entire slab if a critical defect is found) and the "Acceptance" logic (certifying a slab as qualified if no defects are identified). 
+* **Engineering Value**: It handles complex logical operations (such as "Negation as Failure") that are computationally difficult to implement within pure OWL/SWRL frameworks, ensuring robust decision-making for factory deployment.
+
+### Citation
+
+If you use these artifacts in your research, please cite the following paper:
+> *[Insert your paper citation here, e.g., Your Name et al., "Journal of Automation in Construction", 2026]*
