@@ -1,0 +1,4839 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/lqz/ontologies/2025/3/PCS"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/lqz/ontologies/2025/3/PCS"
+     versionIRI="http://www.semanticweb.org/lqz/ontologies/2025/3/PCS/1.0.0">
+    <Prefix name="" IRI="http://www.semanticweb.org/lqz/ontologies/2025/3/PCS"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>A SWRL-based ontology for automated dimensional quality assessment, reason inference, and repair suggestion for prefabricated components.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Author: CQU</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal>Semantic Ontology for Precast Concrete Slab Quality Inspection</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Accept"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Building_types"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Construction_element"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Construction_project_info"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Contour"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dimensional_quality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dimensional_quality_reason"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Distribution_bar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Electrical_box"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Inconsistent_specification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Missing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Opening"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Position_deviation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Prefabricated_balcony_slab"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Prefabricated_decorative_panel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Prefabricated_interior_wall_panel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Prefabricated_laminated_slab"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Prefabricated_pavement_slab"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Prefabricated_roof_panel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Production_activities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Project_Name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Quality_evaluation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Repair_suggestion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Responsibility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Skew_and_torsion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Truss_bar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#basedOnProjectInfo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#beInCharge"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#beResponsibleFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#cause"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#evaluation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_evaluation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_repair_suggestion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_responsibility"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#occur"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#occurIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#produce"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#produceBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#requirRepair"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#diameterThreshold"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasD_Diameter"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasD_Length"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasD_Location"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasD_Number"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasD_Spacing"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasD_Width"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasJudgment"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_Problem"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isQualified"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#lengthThreshold"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#locationThreshold"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numberThreshold"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#overall_quality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#spacingThreshold"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#staff_ID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#widthThreshold"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Accept"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Accept_Instance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Assembly"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Completion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConcreteCuringWorker"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConcretePlacingWorker"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConcreteRougheningWorker"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EmbeddedPartInstallationWorker"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Inconsistent_specification"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Missing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MoldAssemblyWorker"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mold_deformation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mold_displacement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Position_deviation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Production"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RC1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RC2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RC3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RE1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RE2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RE3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RO1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RO2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RO3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ReinforcementTyingWorker"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Reject"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Reject_Instance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Skew_and_torsion"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Accept"/>
+        <Class IRI="#Quality_evaluation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Building_types"/>
+        <Class IRI="#Construction_project_info"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contour"/>
+        <Class IRI="#Dimensional_quality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Distribution_bar"/>
+        <Class IRI="#Dimensional_quality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electrical_box"/>
+        <Class IRI="#Dimensional_quality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hole"/>
+        <Class IRI="#Dimensional_quality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Inconsistent_specification"/>
+        <Class IRI="#Dimensional_quality_reason"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Missing"/>
+        <Class IRI="#Dimensional_quality_reason"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Opening"/>
+        <Class IRI="#Dimensional_quality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Position_deviation"/>
+        <Class IRI="#Dimensional_quality_reason"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Prefabricated_balcony_slab"/>
+        <Class IRI="#Construction_element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Prefabricated_decorative_panel"/>
+        <Class IRI="#Construction_element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Prefabricated_interior_wall_panel"/>
+        <Class IRI="#Construction_element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Prefabricated_laminated_slab"/>
+        <Class IRI="#Construction_element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Prefabricated_pavement_slab"/>
+        <Class IRI="#Construction_element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Prefabricated_roof_panel"/>
+        <Class IRI="#Construction_element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Project_Name"/>
+        <Class IRI="#Construction_project_info"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reject"/>
+        <Class IRI="#Quality_evaluation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Skew_and_torsion"/>
+        <Class IRI="#Dimensional_quality_reason"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Truss_bar"/>
+        <Class IRI="#Dimensional_quality"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Quality_evaluation"/>
+        <NamedIndividual IRI="#Accept"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Accept"/>
+        <NamedIndividual IRI="#Accept_Instance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quality_evaluation"/>
+        <NamedIndividual IRI="#Accept_Instance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Production_activities"/>
+        <NamedIndividual IRI="#Assembly"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Production_activities"/>
+        <NamedIndividual IRI="#Completion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Responsibility"/>
+        <NamedIndividual IRI="#ConcreteCuringWorker"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Responsibility"/>
+        <NamedIndividual IRI="#ConcretePlacingWorker"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Responsibility"/>
+        <NamedIndividual IRI="#ConcreteRougheningWorker"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Responsibility"/>
+        <NamedIndividual IRI="#EmbeddedPartInstallationWorker"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dimensional_quality_reason"/>
+        <NamedIndividual IRI="#Inconsistent_specification"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Inconsistent_specification"/>
+        <NamedIndividual IRI="#Inconsistent_specification"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dimensional_quality_reason"/>
+        <NamedIndividual IRI="#Missing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Missing"/>
+        <NamedIndividual IRI="#Missing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Responsibility"/>
+        <NamedIndividual IRI="#MoldAssemblyWorker"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dimensional_quality_reason"/>
+        <NamedIndividual IRI="#Position_deviation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Position_deviation"/>
+        <NamedIndividual IRI="#Position_deviation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Production_activities"/>
+        <NamedIndividual IRI="#Production"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Repair_suggestion"/>
+        <NamedIndividual IRI="#RC1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Repair_suggestion"/>
+        <NamedIndividual IRI="#RC2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Repair_suggestion"/>
+        <NamedIndividual IRI="#RC3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Repair_suggestion"/>
+        <NamedIndividual IRI="#RE1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Repair_suggestion"/>
+        <NamedIndividual IRI="#RE2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Repair_suggestion"/>
+        <NamedIndividual IRI="#RE3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Repair_suggestion"/>
+        <NamedIndividual IRI="#RO1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Repair_suggestion"/>
+        <NamedIndividual IRI="#RO2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Repair_suggestion"/>
+        <NamedIndividual IRI="#RO3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Repair_suggestion"/>
+        <NamedIndividual IRI="#RS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Responsibility"/>
+        <NamedIndividual IRI="#ReinforcementTyingWorker"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quality_evaluation"/>
+        <NamedIndividual IRI="#Reject"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quality_evaluation"/>
+        <NamedIndividual IRI="#Reject_Instance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Reject"/>
+        <NamedIndividual IRI="#Reject_Instance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Responsibility"/>
+        <NamedIndividual IRI="#Reject_Instance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dimensional_quality_reason"/>
+        <NamedIndividual IRI="#Skew_and_torsion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Skew_and_torsion"/>
+        <NamedIndividual IRI="#Skew_and_torsion"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#beInCharge"/>
+        <NamedIndividual IRI="#MoldAssemblyWorker"/>
+        <NamedIndividual IRI="#Position_deviation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#basedOnProjectInfo"/>
+        <Class IRI="#Production_activities"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#beInCharge"/>
+        <Class IRI="#Responsibility"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#beResponsibleFor"/>
+        <Class IRI="#Dimensional_quality_reason"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#cause"/>
+        <Class IRI="#Dimensional_quality_reason"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#causedBy"/>
+        <Class IRI="#Dimensional_quality"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#evaluation"/>
+        <Class IRI="#Dimensional_quality"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasStage"/>
+        <Class IRI="#Dimensional_quality"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_evaluation"/>
+        <Class IRI="#Construction_element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_repair_suggestion"/>
+        <Class IRI="#Dimensional_quality"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_responsibility"/>
+        <Class IRI="#Dimensional_quality"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#occur"/>
+        <Class IRI="#Construction_element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#occurIn"/>
+        <Class IRI="#Dimensional_quality"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#produce"/>
+        <Class IRI="#Production_activities"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#produceBy"/>
+        <Class IRI="#Construction_element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#requirRepair"/>
+        <Class IRI="#Quality_evaluation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#basedOnProjectInfo"/>
+        <Class IRI="#Construction_project_info"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#beInCharge"/>
+        <Class IRI="#Dimensional_quality_reason"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#beResponsibleFor"/>
+        <Class IRI="#Responsibility"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#cause"/>
+        <Class IRI="#Dimensional_quality"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#causedBy"/>
+        <Class IRI="#Dimensional_quality_reason"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#evaluation"/>
+        <Class IRI="#Quality_evaluation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasStage"/>
+        <Class IRI="#Production_activities"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_evaluation"/>
+        <Class IRI="#Quality_evaluation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_repair_suggestion"/>
+        <Class IRI="#Repair_suggestion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_responsibility"/>
+        <Class IRI="#Responsibility"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#occur"/>
+        <Class IRI="#Dimensional_quality"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#occurIn"/>
+        <Class IRI="#Construction_element"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#produce"/>
+        <Class IRI="#Construction_element"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#produceBy"/>
+        <Class IRI="#Production_activities"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#requirRepair"/>
+        <Class IRI="#Repair_suggestion"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasD_Length"/>
+        <Class IRI="#Dimensional_quality"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasD_Location"/>
+        <Class IRI="#Dimensional_quality"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasD_Number"/>
+        <Class IRI="#Dimensional_quality"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasD_Spacing"/>
+        <Class IRI="#Dimensional_quality"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasD_Width"/>
+        <Class IRI="#Dimensional_quality"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasJudgment"/>
+        <Class IRI="#Dimensional_quality"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isQualified"/>
+        <Class IRI="#Dimensional_quality"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isQualified"/>
+        <Class IRI="#Opening"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#staff_ID"/>
+        <Class IRI="#Responsibility"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasD_Length"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasD_Location"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasD_Number"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasD_Spacing"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasD_Width"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasJudgment"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isQualified"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#staff_ID"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>DB-ER</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Construction_element"/>
+                <Variable IRI="#ce"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#occur"/>
+                <Variable IRI="#ce"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Distribution_bar"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#reason"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_evaluation"/>
+                <Variable IRI="#ce"/>
+                <NamedIndividual IRI="#Reject_Instance"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HL-ER</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Construction_element"/>
+                <Variable IRI="#ce"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#occur"/>
+                <Variable IRI="#ce"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#reason"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_evaluation"/>
+                <Variable IRI="#ce"/>
+                <NamedIndividual IRI="#Reject_Instance"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>OP-ER</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Construction_element"/>
+                <Variable IRI="#ce"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#occur"/>
+                <Variable IRI="#ce"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#reason"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_evaluation"/>
+                <Variable IRI="#ce"/>
+                <NamedIndividual IRI="#Reject_Instance"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>TB-ER</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Construction_element"/>
+                <Variable IRI="#ce"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#occur"/>
+                <Variable IRI="#ce"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Truss_bar"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#reason"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_evaluation"/>
+                <Variable IRI="#ce"/>
+                <NamedIndividual IRI="#Reject_Instance"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S4</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Construction_element"/>
+                <Variable IRI="#ce"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#occur"/>
+                <Variable IRI="#ce"/>
+                <Variable IRI="#c"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Contour"/>
+                <Variable IRI="#c"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#c"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_evaluation"/>
+                <Variable IRI="#ce"/>
+                <NamedIndividual IRI="#Reject_Instance"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>EER</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Construction_element"/>
+                <Variable IRI="#ce"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#occur"/>
+                <Variable IRI="#ce"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Electrical_box"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#reason"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_evaluation"/>
+                <Variable IRI="#ce"/>
+                <NamedIndividual IRI="#Reject_Instance"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S12</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Contour"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Inconsistent_specification"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RC1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#MoldAssemblyWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>RC3-MD</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Contour"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Mold_deformation"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RC3"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ConcreteRougheningWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S13</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Contour"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Mold_deformation"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Production"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RC2"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ConcretePlacingWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>CL-1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Contour"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Length"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dl"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#lengthThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dl"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Inconsistent_specification"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>CW-1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Contour"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Width"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dw"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#widthThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#wt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dw"/>
+                <Variable IRI="#wt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Inconsistent_specification"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>CL-C</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Contour"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Length"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dl"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#lengthThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dl"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Mold_deformation"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>CW-C</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Contour"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Width"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dw"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#widthThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#wt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dw"/>
+                <Variable IRI="#wt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Mold_deformation"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>CL-P</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Contour"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Length"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dl"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#lengthThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dl"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Production"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Mold_deformation"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>COA</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Contour"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Length"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dl"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#lengthThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="#dl"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Width"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dw"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#widthThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#wt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="#dw"/>
+                <Variable IRI="#wt"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#isQualified"/>
+                <Variable IRI="#x"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_evaluation"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Accept_Instance"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>RC1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Contour"/>
+                <Variable IRI="#c"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#c"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#c"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#c"/>
+                <NamedIndividual IRI="#RC1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#c"/>
+                <NamedIndividual IRI="#MoldAssemblyWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>CER</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Contour"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#reason"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_evaluation"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Reject_Instance"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>RC3</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Contour"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RC3"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ConcreteCuringWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>RC2</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Contour"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Production"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RC2"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ConcretePlacingWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>DB-Rep-Pos</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Distribution_bar"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RS"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ReinforcementTyingWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>DB-Loc-Dev</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Distribution_bar"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Location"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dloc"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#locationThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dloc"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>DBA</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Distribution_bar"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Number"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dn"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#numberThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#nt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#equal">
+                <Variable IRI="#dn"/>
+                <Variable IRI="#nt"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Spacing"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#ds"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#spacingThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#st"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="#ds"/>
+                <Variable IRI="#st"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Location"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dloc"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#locationThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="#dloc"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#isQualified"/>
+                <Variable IRI="#x"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_evaluation"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Accept_Instance"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S38</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Distribution_bar"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#reason"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_evaluation"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Reject_Instance"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S36</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Distribution_bar"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RS"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ReinforcementTyingWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S37</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Distribution_bar"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Skew_and_torsion"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RS"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ReinforcementTyingWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S34</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Distribution_bar"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Number"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dn"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#numberThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#nt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#notEqual">
+                <Variable IRI="#dn"/>
+                <Variable IRI="#nt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S35</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Distribution_bar"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Spacing"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#ds"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#spacingThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#st"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#ds"/>
+                <Variable IRI="#st"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Skew_and_torsion"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>EB-Rep-M-C</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Electrical_box"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RE3"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ConcreteRougheningWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>EB-Rep-M-P</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Electrical_box"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Production"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RE2"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ConcretePlacingWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>EB-M-C</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Electrical_box"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Number"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dn"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#numberThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#nt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#notEqual">
+                <Variable IRI="#dn"/>
+                <Variable IRI="#nt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>EB-M-P</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Electrical_box"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Number"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dn"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#numberThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#nt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#notEqual">
+                <Variable IRI="#dn"/>
+                <Variable IRI="#nt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Production"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>EBA</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Electrical_box"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Number"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dn"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#numberThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#nt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#equal">
+                <Variable IRI="#dn"/>
+                <Variable IRI="#nt"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Location"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dloc"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#locationThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="#dloc"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#isQualified"/>
+                <Variable IRI="#x"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_evaluation"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Accept_Instance"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S11</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Electrical_box"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#reason"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_evaluation"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Reject_Instance"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S6</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Electrical_box"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RE1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#EmbeddedPartInstallationWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S7</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Electrical_box"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RE1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#EmbeddedPartInstallationWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S9</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Electrical_box"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RE3"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ConcreteRougheningWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S8</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Electrical_box"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Production"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RE2"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ConcretePlacingWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>EL-A-1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Electrical_box"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Location"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dloc"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#locationThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dloc"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S5</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Electrical_box"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Number"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dn"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#notEqual">
+                <Variable IRI="#dn"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>EL-C-1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Electrical_box"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Location"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dloc"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#locationThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dloc"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>EL-P-1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Electrical_box"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Location"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dloc"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#locationThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dloc"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Production"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HL-Rep-M-C</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RO3"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ConcreteRougheningWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HL-Rep-M-P</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Production"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RO2"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ConcretePlacingWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HL-Rep-MD-C</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Mold_deformation"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RO3"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ConcreteRougheningWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HL-Rep-MD-P</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Mold_deformation"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Production"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RO2"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ConcretePlacingWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HD-C-1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Diameter"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dd"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#diameterThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#notEqual">
+                <Variable IRI="#dd"/>
+                <Variable IRI="#dt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Mold_deformation"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HL-M-C</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Number"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dn"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#numberThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#nt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#notEqual">
+                <Variable IRI="#dn"/>
+                <Variable IRI="#nt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HD-P-1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Diameter"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dd"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#diameterThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#notEqual">
+                <Variable IRI="#dd"/>
+                <Variable IRI="#dt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Production"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Mold_deformation"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HL-M-P</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Number"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dn"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#numberThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#nt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#notEqual">
+                <Variable IRI="#dn"/>
+                <Variable IRI="#nt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Production"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HEA</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Number"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dn"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#numberThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#nt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#equal">
+                <Variable IRI="#dn"/>
+                <Variable IRI="#nt"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Location"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dloc"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#locationThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="#dloc"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Diameter"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dd"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#diameterThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="#dd"/>
+                <Variable IRI="#dt"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#isQualified"/>
+                <Variable IRI="#x"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_evaluation"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Accept_Instance"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S33</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#reason"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_evaluation"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Reject_Instance"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S30</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Inconsistent_specification"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RO1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#EmbeddedPartInstallationWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S28</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RO1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#EmbeddedPartInstallationWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>RO1-H-A</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RO1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#EmbeddedPartInstallationWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S32</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RO3"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ConcreteRougheningWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S31</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Production"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RO2"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ConcretePlacingWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>MD-A-1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Diameter"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dd"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#diameterThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dd"/>
+                <Variable IRI="#dt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Inconsistent_specification"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HL-A-1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Location"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dloc"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#locationThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dloc"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HN-M-1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Number"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dn"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#numberThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#nt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#notEqual">
+                <Variable IRI="#dn"/>
+                <Variable IRI="#nt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HL-C-1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Location"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dloc"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#locationThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dloc"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HL-P-1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Hole"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Location"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dloc"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#locationThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dloc"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Production"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>OP-Rep-M-C</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RO3"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ConcreteRougheningWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>OP-Rep-M-P</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Production"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RO2"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ConcretePlacingWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>RO3-MD</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Mold_deformation"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RO3"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ConcreteRougheningWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>RO2-MD</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Mold_deformation"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Production"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RO2"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ConcretePlacingWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>RO2-P</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Production"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RO2"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ConcretePlacingWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>OL-1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Location"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dloc"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#locationThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dloc"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>O-L-C</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Length"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dl"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#lengthThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dl"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Mold_deformation"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>OP-M-C</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Number"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dn"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#numberThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#nt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#notEqual">
+                <Variable IRI="#dn"/>
+                <Variable IRI="#nt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>O-W-C</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Width"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dw"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#widthThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#wt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dw"/>
+                <Variable IRI="#wt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Mold_deformation"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>O-L-P</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Length"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dl"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#lengthThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dl"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Production"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Mold_deformation"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>OL-P-1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Location"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dloc"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#locationThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dloc"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Production"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>OP-M-P</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Number"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dn"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#numberThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#nt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#notEqual">
+                <Variable IRI="#dn"/>
+                <Variable IRI="#nt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Production"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>O-W-P</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Width"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dw"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#widthThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#wt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dw"/>
+                <Variable IRI="#wt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Production"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Mold_deformation"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>OER</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#reason"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_evaluation"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Reject_Instance"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>RO1-I</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Inconsistent_specification"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RO1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#EmbeddedPartInstallationWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>RO1-M</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RO1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#EmbeddedPartInstallationWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>RO1-P</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RO1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#EmbeddedPartInstallationWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>RO3-P</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RO3"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ConcreteRougheningWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>O(L)-1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Length"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dl"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#lengthThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dl"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Inconsistent_specification"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>OM</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Number"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dn"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#numberThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#nt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#notEqual">
+                <Variable IRI="#dn"/>
+                <Variable IRI="#nt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>OW-1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Width"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dw"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#widthThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#wt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dw"/>
+                <Variable IRI="#wt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Inconsistent_specification"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>OL-1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Location"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dloc"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#locationThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dloc"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Completion"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>OEA</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Opening"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Number"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dn"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#numberThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#nt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#equal">
+                <Variable IRI="#dn"/>
+                <Variable IRI="#nt"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Location"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dloc"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#locationThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="#dloc"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Length"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dl"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#lengthThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lth"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="#dl"/>
+                <Variable IRI="#lth"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Width"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dw"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#widthThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#wth"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="#dw"/>
+                <Variable IRI="#wth"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#isQualified"/>
+                <Variable IRI="#x"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_evaluation"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Accept_Instance"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>TB-Rep-Pos</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Truss_bar"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RS"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ReinforcementTyingWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>TB-Loc-Dev</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Truss_bar"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Location"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dloc"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#locationThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#dloc"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Position_deviation"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>TBA</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Truss_bar"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Number"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dn"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#numberThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#nt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#equal">
+                <Variable IRI="#dn"/>
+                <Variable IRI="#nt"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Spacing"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#ds"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#spacingThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#st"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="#ds"/>
+                <Variable IRI="#st"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Location"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dloc"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#locationThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#lt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="#dloc"/>
+                <Variable IRI="#lt"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#isQualified"/>
+                <Variable IRI="#x"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_evaluation"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Accept_Instance"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S43</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Truss_bar"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#reason"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_evaluation"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Reject_Instance"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S41</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Truss_bar"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RS"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ReinforcementTyingWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S42</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Truss_bar"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Skew_and_torsion"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_repair_suggestion"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#RS"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#has_responsibility"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#ReinforcementTyingWorker"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S39</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Truss_bar"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Number"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#dn"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#numberThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#nt"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#notEqual">
+                <Variable IRI="#dn"/>
+                <Variable IRI="#nt"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Missing"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S40</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Truss_bar"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasD_Spacing"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#ds"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#spacingThreshold"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#st"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#ds"/>
+                <Variable IRI="#st"/>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasStage"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Assembly"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#causedBy"/>
+                <Variable IRI="#x"/>
+                <NamedIndividual IRI="#Skew_and_torsion"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

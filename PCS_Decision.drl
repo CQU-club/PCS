@@ -1,0 +1,193 @@
+package com.cqu.pcs.rules;
+
+// 导入 Java 实体类 (根据你的实际项目包路径进行修改)
+import com.cqu.pcs.model.*;
+
+dialect "java"
+
+// ========================================================================
+// 第一阶段：全局宏观评价（封闭世界假设 CWA）
+// 翻译规则: DB-ER [cite: 45, 46], HL-ER [cite: 50, 51], OP-ER [cite: 55, 56], TB-ER [cite: 60, 61], S4 [cite: 66], EER [cite: 71]
+// ========================================================================
+
+rule "Global_Veto_Reject"
+    salience 100 // 最高优先级，一旦发现问题立即“一票否决”
+when
+    $ce : ConstructionElement( evaluation == null )
+    // 只要该预制板下包含任何带有缺陷原因 (causedBy != null) 的构件
+    $dq : DimensionalQuality( occurIn == $ce, causedBy != null )
+then
+    modify($ce) { setEvaluation("Reject_Instance") };
+    System.out.println("预制板 " + $ce.getId() + " 被一票否决！缺陷部位: " + $dq.getId());
+end
+
+rule "Global_Accept_Pass"
+    salience -100 // 最低优先级，作为兜底规则
+when
+    $ce : ConstructionElement( evaluation == null )
+    // 如果遍历完所有检测项，不存在任何一个构件带有缺陷原因
+    not DimensionalQuality( occurIn == $ce, causedBy != null )
+then
+    modify($ce) { setEvaluation("Accept_Instance") };
+    System.out.println("预制板 " + $ce.getId() + " 全部指标合格，准许放行！");
+end
+
+
+// ========================================================================
+// 第二阶段：尺寸与数量的微观缺陷捕捉 (微观检测层)
+// 动态检测各种构件在 Assembly, Production, Completion 三个阶段的越界行为
+// ========================================================================
+
+// 1. 轮廓 (Contour) 尺寸越界检测
+// 翻译规则: CL-1 [cite: 91, 92], CW-1 [cite: 97, 98], CL-P [cite: 115], CL-C [cite: 103], CW-C [cite: 108, 109]
+rule "Contour_Size_Deviation_Assembly"
+when
+    $c : Contour( hasStage == "Assembly", causedBy == null,
+                  (hasD_Length > lengthThreshold) || (hasD_Width > widthThreshold) )
+then
+    modify($c) { setCausedBy("Inconsistent_specification") };
+end
+
+rule "Contour_Size_Deviation_Post_Pouring"
+when
+    $c : Contour( hasStage in ("Production", "Completion"), causedBy == null,
+                  (hasD_Length > lengthThreshold) || (hasD_Width > widthThreshold) )
+then
+    modify($c) { setCausedBy("Mold_deformation") };
+end
+
+// 2. 钢筋 (Distribution_bar & Truss_bar) 缺陷检测
+// 翻译规则: S34 [cite: 183], S35 [cite: 189], DB-Loc-Dev [cite: 153], S39 [cite: 552], S40 [cite: 558], TB-Loc-Dev [cite: 522]
+rule "Rebar_Missing"
+when
+    $bar : DimensionalQuality( this instanceof DistributionBar || this instanceof TrussBar,
+                               hasStage == "Assembly", hasD_Number != numberThreshold, causedBy == null )
+then
+    modify($bar) { setCausedBy("Missing") };
+end
+
+rule "Rebar_Skew_and_Torsion"
+when
+    $bar : DimensionalQuality( this instanceof DistributionBar || this instanceof TrussBar,
+                               hasStage == "Assembly", hasD_Spacing > spacingThreshold, causedBy == null )
+then
+    modify($bar) { setCausedBy("Skew_and_torsion") };
+end
+
+rule "Rebar_Position_Deviation"
+when
+    $bar : DimensionalQuality( this instanceof DistributionBar || this instanceof TrussBar,
+                               hasStage == "Assembly", hasD_Location > locationThreshold, causedBy == null )
+then
+    modify($bar) { setCausedBy("Position_deviation") };
+end
+
+// 3. 孔洞、洞口与机电盒 (Hole, Opening, Electrical_box) - 丢失检测
+// 翻译规则: S5 [cite: 255], EB-M-P [cite: 211], EB-M-C [cite: 205], HN-M-1 [cite: 367], HL-M-P [cite: 310], HL-M-C [cite: 298], OM [cite: 487]
+rule "Embedded_Part_Missing_All_Stages"
+when
+    $part : DimensionalQuality( this instanceof Hole || this instanceof Opening || this instanceof ElectricalBox,
+                                hasD_Number != numberThreshold, causedBy == null )
+then
+    modify($part) { setCausedBy("Missing") };
+end
+
+// 4. 孔洞、洞口与机电盒 - 位置与直径越界检测
+// 翻译规则: EL-A-1 [cite: 249], HL-A-1 [cite: 361], HD-P-1 [cite: 304], HD-C-1 [cite: 292, 293], OL-1 [cite: 411]
+rule "Embedded_Part_Position_Deviation"
+when
+    $part : DimensionalQuality( this instanceof Hole || this instanceof Opening || this instanceof ElectricalBox,
+                                hasD_Location > locationThreshold, causedBy == null )
+then
+    modify($part) { setCausedBy("Position_deviation") };
+end
+
+rule "Hole_Diameter_Deformation_Post_Pouring"
+when
+    $h : Hole( hasStage in ("Production", "Completion"), hasD_Diameter != diameterThreshold, causedBy == null )
+then
+    modify($h) { setCausedBy("Mold_deformation") };
+end
+
+
+// ========================================================================
+// 第三阶段：修复建议与责任判定 (追责层)
+// 依据确定的 causedBy 和 hasStage，自动匹配修复策略和相应的责任工人
+// ========================================================================
+
+// 1. 钢筋问题追责 (Distribution_bar, Truss_bar)
+// 翻译规则: DB-Rep-Pos [cite: 148], S36 [cite: 172, 173], S37 [cite: 178], S41 [cite: 542], S42 [cite: 547], TB-Rep-Pos [cite: 517]
+rule "Assign_Repair_Rebar"
+when
+    $bar : DimensionalQuality( this instanceof DistributionBar || this instanceof TrussBar,
+                               hasStage == "Assembly", causedBy != null, has_repair_suggestion == null )
+then
+    modify($bar) { setHas_repair_suggestion("RS"), setHas_responsibility("ReinforcementTyingWorker") };
+end
+
+// 2. 轮廓涨模追责 (Contour)
+// 翻译规则: RC1 [cite: 128], S12 [cite: 76], S13 [cite: 86], RC2 [cite: 142, 143], RC3 [cite: 137, 138], RC3-MD [cite: 81]
+rule "Assign_Repair_Contour_Assembly"
+when
+    $c : Contour( hasStage == "Assembly", causedBy != null, has_repair_suggestion == null )
+then
+    modify($c) { setHas_repair_suggestion("RC1"), setHas_responsibility("MoldAssemblyWorker") };
+end
+
+rule "Assign_Repair_Contour_Production"
+when
+    $c : Contour( hasStage == "Production", causedBy != null, has_repair_suggestion == null )
+then
+    modify($c) { setHas_repair_suggestion("RC2"), setHas_responsibility("ConcretePlacingWorker") };
+end
+
+rule "Assign_Repair_Contour_Completion"
+when
+    $c : Contour( hasStage == "Completion", causedBy != null, has_repair_suggestion == null )
+then
+    modify($c) { setHas_repair_suggestion("RC3"), setHas_responsibility("ConcreteRougheningWorker") };
+end
+
+// 3. 预埋件(电气盒、孔洞、洞口)追责
+// 翻译规则: S6 [cite: 228], EB-Rep-M-P [cite: 200], EB-Rep-M-C [cite: 194, 195], RO1-H-A [cite: 340], HL-Rep-M-P [cite: 277], HL-Rep-M-C [cite: 271, 272]
+rule "Assign_Repair_Embedded_Assembly"
+when
+    $part : DimensionalQuality( this instanceof Hole || this instanceof Opening || this instanceof ElectricalBox,
+                                hasStage == "Assembly", causedBy != null, has_repair_suggestion == null )
+then
+    // 根据具体类型分配对应的修复编号
+    String repairCode = ($part instanceof ElectricalBox) ? "RE1" : "RO1";
+    modify($part) { setHas_repair_suggestion(repairCode), setHas_responsibility("EmbeddedPartInstallationWorker") };
+end
+
+rule "Assign_Repair_Embedded_Production"
+when
+    $part : DimensionalQuality( this instanceof Hole || this instanceof Opening || this instanceof ElectricalBox,
+                                hasStage == "Production", causedBy != null, has_repair_suggestion == null )
+then
+    String repairCode = ($part instanceof ElectricalBox) ? "RE2" : "RO2";
+    modify($part) { setHas_repair_suggestion(repairCode), setHas_responsibility("ConcretePlacingWorker") };
+end
+
+rule "Assign_Repair_Embedded_Completion"
+when
+    $part : DimensionalQuality( this instanceof Hole || this instanceof Opening || this instanceof ElectricalBox,
+                                hasStage == "Completion", causedBy != null, has_repair_suggestion == null )
+then
+    String repairCode = ($part instanceof ElectricalBox) ? "RE3" : "RO3";
+    modify($part) { setHas_repair_suggestion(repairCode), setHas_responsibility("ConcreteRougheningWorker") };
+end
+
+
+// ========================================================================
+// 第四阶段：构件自身合格标记 (兜底通行判定)
+// 翻译规则: COA [cite: 120, 121], HEA [cite: 316], OEA [cite: 505], DBA [cite: 159], TBA [cite: 528], EBA [cite: 216, 217]
+// ========================================================================
+
+rule "Component_Acceptance"
+    salience -50 // 仅在所有缺陷检查全部走完后执行
+when
+    $dq : DimensionalQuality( isQualified == null, causedBy == null )
+then
+    modify($dq) { setIsQualified(true), setHas_evaluation("Accept_Instance") };
+end
