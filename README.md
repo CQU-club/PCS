@@ -26,7 +26,8 @@
 ### 引用
 
 如果您在研究中使用了这些资源，请引用以下论文：
-> OntoCV-ADM: A Vision-and-Knowledge Multimodal Framework for Dimensional Quality Assessment and Decision Making
+> Vision-knowledge multimodal framework for dimensional quality assessment and decision-making of prefabricated concrete slabs
+> https://www.sciencedirect.com/science/article/pii/S0926580526003390
 
 ---
 
@@ -51,4 +52,5 @@ This repository contains two essential components that drive the quality control
 ### Citation
 
 If you use these artifacts in your research, please cite the following paper:
-> OntoCV-ADM: A Vision-and-Knowledge Multimodal Framework for Dimensional Quality Assessment and Decision Making
+>Vision-knowledge multimodal framework for dimensional quality assessment and decision-making of prefabricated concrete slabs
+>https://www.sciencedirect.com/science/article/pii/S0926580526003390
